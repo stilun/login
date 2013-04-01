@@ -1,0 +1,198 @@
+/** 
+ * Description: Core theme for Lydia
+ */
+
+/**
+ * Structure
+ */
+/** 
+ * My own style, based on HTML5Boilerplate standard style.
+ */
+@import url(../css/style.css);
+@import url(http://fonts.googleapis.com/css?family=Shojumaru);
+
+
+/**
+ * Structure
+ */
+html 
+{
+  overflow-y:scroll;
+}
+
+body 
+{
+  background-color:#CCCCCC;
+  color:#333;
+}
+
+td, th, body 
+{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+	color: #333333;
+}
+
+#header,
+#main,
+#footer 
+{
+  margin:8px auto;
+  padding:1em;
+  background-color:#fff;
+  border:1px solid #999;
+  border-radius: 10px;
+} 
+
+#header
+{
+	width:750px;
+}
+
+#main,
+#footer 
+{
+	width:700px;
+}
+
+#main 
+{
+  min-height:20em;
+}
+
+#footer 
+{
+  font-size:0.9em;
+}
+
+
+#footer,
+#footer a {color:#666;}
+#footer a:hover {color:#333; text-decoration:none;}
+
+/**
+ * Fonts
+ */
+h1
+{ 
+	font-family: 'Shojumaru', cursive;
+	line-height:0;
+	font-size:2.5em;
+	padding-left:20px;
+	color:#333;
+	text-shadow:#ccc 4px -4px 4px;
+}
+
+h2,h3
+{
+  border-bottom:1px solid #dddddd;
+  color: #800000;
+} 
+
+
+/**
+ * Links
+ */
+a, a:visited 
+{
+  color:#A84C00;
+}
+
+
+/**
+ * Figure and images
+ */
+figure 
+{
+  display: table;
+  width:1px;
+  border: 2px solid #eee;
+  margin:1em;
+  padding:2px;
+}
+
+figcaption 
+{
+  border: 2px solid #eee;	
+  display: table-row;
+  vertical-align: bottom;
+}
+
+a figcaption,
+figcaption 
+{
+  font-style:italic;
+  font-size:smaller;
+  color:#666;
+}
+
+figure.right{margin-right:0;}
+figure.top{margin-top:0;}
+figure.fullwidth{margin-left:0;margin-right:0;}
+
+a:hover figure 
+{
+  background-color:#eee;
+  border:2px solid #999;
+}
+
+
+/**
+ * byline & signature
+ */
+.byline 
+{
+  clear: both;
+  border-top: 1px dashed #999;
+  margin-top:2em;
+  padding: 1em;
+  color: #666;
+  font-size: smaller;
+  font-style:italic;
+}
+.byline img {padding:2px; outline:#999;}
+
+
+
+/**
+* Forms
+*/
+input{font:inherit;}
+input[readonly]{color:#666;}
+label{font-size:smaller;}
+
+/**
+* Login menu
+*/
+#login-menu{float:right;}
+#login-menu img.gravatar{vertical-align:middle;}
+#login-menu a{text-decoration:none;}
+#login-menu a:hover{text-decoration:underline;}
+
+
+
+/**
+* User feedback message wrappers.
+*/
+.error, .alert, .warning, .notice, .success, .info {
+padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; border-radius: 10px;}
+
+.error, .alert { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4;}
+.notice, .warning { background: #fff6bf; color: #514721; border-color: #ffd324;}
+.success { background: #e6efc2; color: #264409; border-color: #c6d880;}
+.info { background: #d5edf8; color: #205791; border-color: #92cae4;}
+.error a, .alert a { color: #8a1f11;}
+.notice a, .warning a { color: #514721;}
+.success a { color: #264409; }
+.info a { color: #205791; }
+.fieldset {background:lightgrey; border-radius: 10px;}
+
+.validation-failed{border:2px solid red;}
+.validation-message{color:red;font-size:smaller;}
+
+
+/**
+ * Misc classes
+ */
+.right {float:right;} 
+*/
