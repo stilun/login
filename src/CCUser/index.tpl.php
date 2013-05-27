@@ -3,4 +3,5 @@
 the upper right corner to interact with these controller.</p>
 <ul>
   <li><a href='<?=create_url('user/init')?>'>Init database, create tables and create default admin user</a>
+  <li><a href='<?=create_url('index')?>'>Go to Index Controller</a>
 </ul>

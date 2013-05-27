@@ -77,7 +77,10 @@ $ly->config['controllers'] = array(
   'index'     => array('enabled' => true,'class' => 'CCIndex'),
   'developer' => array('enabled' => true,'class' => 'CCDeveloper'),
   'guestbook' => array('enabled' => true,'class' => 'CCGuestbook'),
+  'blog'      => array('enabled' => true,'class' => 'CCBlog'),
+  'page'      => array('enabled' => true,'class' => 'CCPage'),
   'user'      => array('enabled' => true,'class' => 'CCUser'),
+  'content'   => array('enabled' => true,'class' => 'CCContent'),
   'acp'       => array('enabled' => true,'class' => 'CCAdminControlPanel'),
 );
 

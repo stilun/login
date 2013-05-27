@@ -10,4 +10,6 @@
     <?php endif; ?>
   </fieldset>
 </form>
-
+<ul>
+	<li><a href='<?=create_url('index')?>'>Go to Index Controller</a>
+</ul>

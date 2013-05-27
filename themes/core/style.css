@@ -157,9 +157,17 @@ a:hover figure
 /**
 * Forms
 */
-input{font:inherit;}
+input,textarea{font:inherit;}
 input[readonly]{color:#666;}
-label{font-size:smaller;}
+/*label{font-size:smaller;}*/
+.validation-failed{border:2px solid red;}
+.validation-message{color:red;font-size:smaller;}
+.form-action-link{font-size:smaller;}
+
+input[type=text]{width:30em;}
+textarea{width:40em;height:15em;}
+
+
 
 /**
 * Login menu
@@ -192,7 +200,6 @@ padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; border-radius: 10px;
 
 
 /**
- * Misc classes
- */
-.right {float:right;} 
+* Misc classes
 */
+.right {float:right;} 

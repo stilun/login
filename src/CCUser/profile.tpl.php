@@ -13,3 +13,6 @@
 <?php else: ?>
 <p>User is anonymous and not authenticated.</p>
 <?php endif; ?>
+<ul>
+	<li><a href='<?=create_url('index')?>'>Go to Index Controller</a>
+</ul>

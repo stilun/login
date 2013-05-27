@@ -1,3 +1,3 @@
-My guestbook project in Lydia.
+My MVC project in Lydia.
 ==============================
-My first guestbook project in Lydia to download, perhaps.
+Modeller för login, användare och grupper.

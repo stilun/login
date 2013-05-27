@@ -7,7 +7,6 @@
 class CCUser extends CObject implements IController 
 {
 	
-	protected $user;
 
 	/**
 	* Constructor
@@ -15,7 +14,6 @@ class CCUser extends CObject implements IController
 	public function __construct() 
 	{
 		parent::__construct();
-		$this->user = new CMUser();
 	}
 
 	/**

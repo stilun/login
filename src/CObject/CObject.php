@@ -63,9 +63,9 @@ class CObject
 	*
 	* @param string method name the method, default is index method.
 	*/
-	protected function RedirectToController($method=null) 
+	protected function RedirectToController($method=null, $arguments=null) 
 	{
-		$this->RedirectTo($this->request->controller, $method);
+		$this->RedirectTo($this->request->controller, $method, $arguments);
 	}
 
 
@@ -75,11 +75,11 @@ class CObject
 	* @param string controller name the controller or null for current controller.
 	* @param string method name the method, default is current method.
 	*/
-	protected function RedirectToControllerMethod($controller=null, $method=null) 
+	protected function RedirectToControllerMethod($controller=null, $method=null, $arguments=null) 
 	{
 		$controller = is_null($controller) ? $this->request->controller : null;
 		$method = is_null($method) ? $this->request->method : null;	
-		$this->RedirectTo($this->request->CreateUrl($controller, $method));
+		$this->RedirectTo($this->request->CreateUrl($controller, $method, $arguments));
 	}
 
 

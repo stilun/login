@@ -20,3 +20,6 @@
   <p><?=htmlent($val['entry'])?></p>
 </div>
 <?php endforeach;?>
+<ul>
+	<li><a href='<?=create_url('index')?>'>Go to Index Controller</a>
+</ul>

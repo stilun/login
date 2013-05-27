@@ -136,30 +136,39 @@ class CLydia implements ISingleton
 	*/
 	public function ThemeEngineRender() 
 	{
-	    // Get the paths and settings for the theme
-	    $themeName   = $this->config['theme']['name'];
-	    $themePath   = LYDIA_INSTALL_PATH . "/themes/{$themeName}";
-	    $themeUrl    = $this->request->base_url . "themes/{$themeName}";
+		// Save to session before output anything
+		$this->session->StoreInSession();
+  
+		// Is theme enabled?
+		if(!isset($this->config['theme'])) 
+		{
+			return;
+	    	}
 	    
-	    // Add stylesheet path to the $ly->data array
-	    $this->data['stylesheet'] = "{$themeUrl}/style.css";
+		// Get the paths and settings for the theme
+		$themeName   = $this->config['theme']['name'];
+		$themePath   = LYDIA_INSTALL_PATH . "/themes/{$themeName}";
+		$themeUrl    = $this->request->base_url . "themes/{$themeName}";
+	    
+		// Add stylesheet path to the $ly->data array
+		$this->data['stylesheet'] = "{$themeUrl}/style.css";
 	
-	    // Include the global functions.php and the functions.php that are part of the theme
-	    $ly = &$this;
-	    include(LYDIA_INSTALL_PATH . '/themes/functions.php');
-	    $functionsPath = "{$themePath}/functions.php";
-	    if(is_file($functionsPath)) 
-	    {
-	    	    include $functionsPath;
-	    }
+		// Include the global functions.php and the functions.php that are part of the theme
+		$ly = &$this;
+		include(LYDIA_INSTALL_PATH . '/themes/functions.php');
+		$functionsPath = "{$themePath}/functions.php";
+		if(is_file($functionsPath)) 
+		{
+			include $functionsPath;
+		}
 
-	    // Extract $ly->data to own variables and handover to the template file
-	    //extract($this->data);      
-	    //include("{$themePath}/default.tpl.php");
-	    // Extract $ly->data and $ly->view->data to own variables and handover to the template file
-	    extract($this->data);     
-	    extract($this->views->GetData());     
-	    include("{$themePath}/default.tpl.php");
+		// Extract $ly->data to own variables and handover to the template file
+		//extract($this->data);      
+		//include("{$themePath}/default.tpl.php");
+		// Extract $ly->data and $ly->view->data to own variables and handover to the template file
+		extract($this->data);     
+		extract($this->views->GetData());     
+		include("{$themePath}/default.tpl.php");
 	}
 	
 } 
